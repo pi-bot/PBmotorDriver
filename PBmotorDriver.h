@@ -6,9 +6,9 @@
 class PBmotorDriver
 {
   public:
-    static void setLMpower(int power);
-    static void setRMpower(int power);
-    static void setPowers(int LMpower, int RMpower);
+    static void setLMpwr(int pwr);
+    static void setRMpwr(int pwr);
+    static void setPwrs(int LMpwr, int RMpwr);
 
   private:
     static void initPinsAndMaybeTimer();
