@@ -21,12 +21,10 @@ to full speed reverse, and back to stopped. Then, it does the same
 with the other motor.
 
 ## Documentation
-- `void setLMpwr(int pwr)` <br> Set the power factor and direction for
-  motor 1. Power factor should be between -255 and 255. The motors brake at 0. 
+- `void setLMpwr(int pwr)` <br> Set the power factor and direction for the left motor.
+  Power factors should be between -255 and 255. The motors brake at supplied values of 0. 
 - `void setRMpwr(int pwr)` <br> Set the power factor and direction for the right motor.
-Power factor should be between -255 and 255. The motors brake at 0. 
-- `void setPwrs(int LMpwr, int RMpwr)` <br> Set power and
-  direction for both motors.
+- `void setPwrs(int LMpwr, int RMpwr)` <br> Set power and direction for both motors.
 
 **N.B.** The voltage supplied to the motors are directly from the battery when a micro-usb power supply is disconnected. This means that the power and subsequent speeds of the motors will depend on the batteries charge level.
 
