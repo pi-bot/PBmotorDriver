@@ -34,6 +34,8 @@ void PBmotorDriver::setLMpwr(int pwr)
   if (pwr > 255)  // max 
     pwr = 255;
     
+  analogWrite(_LMPWM, pwr); // default to using analogWrite
+  
   if (reverse==1) //
     digitalWrite(_LMDIR, HIGH);
   else
@@ -53,6 +55,7 @@ void PBmotorDriver::setRMpwr(int pwr)
   if (pwr > 255)  // max PWM duty cycle
     pwr = 255;
     
+   analogWrite(_RMPWM, pwr); // default to using analogWrite
 
   if (reverse==1) //
     digitalWrite(_RMDIR, HIGH);
