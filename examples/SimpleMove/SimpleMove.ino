@@ -22,52 +22,53 @@ void loop()
   digitalWrite(LED_PIN, HIGH);
   
     motors.setLMpwr(122);
-    delay(500);
+    delay(2000);
     motors.setLMpwr(255);
-    delay(500);
+    delay(2000);
     
    // run LM backward : turns PiBot to the left
     
     digitalWrite(LED_PIN, LOW);
     
-    motors.setLMpwr(122);
-    delay(500);
-    motors.setLMpwr(255);
-    delay(500);
+    motors.setLMpwr(-122);
+    delay(2000);
+    motors.setLMpwr(-255);
+    delay(2000);
  
    // run RM motor forward : turns PiBot to the left
   
-  digitalWrite(LED_PIN, HIGH);
-  
-    motors.setLMpwr(122);
-    delay(500);
-    motors.setLMpwr(255);
-    delay(500);
+    digitalWrite(LED_PIN, HIGH);
+    motors.setLMpwr(0);
+ 
+    motors.setRMpwr(122);
+    delay(2000);
+    motors.setRMpwr(255);
+    delay(2000);
     
    // run RM backward : turns PiBot to the right
     
     digitalWrite(LED_PIN, LOW);
     
-    motors.setLMpwr(122);
-    delay(500);
-    motors.setLMpwr(255);
-    delay(500);
+    motors.setRMpwr(-122);
+    delay(2000);
+    motors.setRMpwr(-255);
+    delay(2000);
  
    // run both motors forward : moves PiBot forward 
   digitalWrite(LED_PIN, HIGH);
   
     motors.setPwrs(122, 122);
-    delay(500);
+    delay(2000);
     motors.setPwrs(255, 255);
-    delay(500);
+    delay(2000);
  
     // run both motors backward : moves PiBot backward 
   digitalWrite(LED_PIN, HIGH);
   
     motors.setPwrs(-122, -122);
-    delay(500);
+    delay(2000);
     motors.setPwrs(-255, -255);
-    delay(500);
+    delay(2000);
  
-  delay(3000);   // wait 3 seconds before repeating the loop
+  delay(6000);   // wait before repeating the loop
 }
