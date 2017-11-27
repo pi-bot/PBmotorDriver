@@ -77,7 +77,7 @@ void PBmotorDriver::stopLM()
 } 
 
 // stop function for right motor
-void PBmotorDriver::stopLM()
+void PBmotorDriver::stopRM()
 {
   setRMpwr(0);  
 } 
