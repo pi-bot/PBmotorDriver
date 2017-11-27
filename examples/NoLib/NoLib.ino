@@ -45,31 +45,30 @@ void loop() {
   analogWrite(LMPWM, 0);
   analogWrite(RMPWM, 0);
   digitalWrite(LMDIR, HIGH);
-  digitalWrite(LMDIR, LOW);
+  digitalWrite(RMDIR, LOW);
 
   // Make PiBot turn to the right for one second
   analogWrite(LMPWM, 127);
-  
+  delay(2000);
   
   // Make PiBot turn to the left for one second
   analogWrite(LMPWM, 0);
   analogWrite(RMPWM, 127);
-  
-  delay(1000);
+  delay(2000);
   
   
    // Make PiBot go foreward for 1s 
   analogWrite(LMPWM, 127);
   analogWrite(RMPWM, 127);
   
-  delay(1000);
+  delay(2000);
   
   
    // Make PiBot go backward for 1s 
   digitalWrite(LMDIR, LOW);
-  digitalWrite(LMDIR, HIGH);
+  digitalWrite(RMDIR, HIGH);
   
-  delay(1000);
+  delay(2000);
   
   
   //Stop the robot for 3s before loop repeats  
@@ -77,6 +76,6 @@ void loop() {
   analogWrite(LMPWM, 0);
   analogWrite(RMPWM, 0);
   
-  delay(3000);
+  delay(6000);
   
 }
