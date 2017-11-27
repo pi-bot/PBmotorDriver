@@ -1,7 +1,7 @@
 #include "PBmotorDriver.h"
 const unsigned char PBmotorDriver::_LMDIR = 8;
 const unsigned char PBmotorDriver::_RMDIR = 7;
-const unsigned char PBmotorDriverr::_LMPWM = 9;
+const unsigned char PBmotorDriver::_LMPWM = 9;
 const unsigned char PBmotorDriver::_RMPWM = 10;
 
 void PBmotorDriver::initPinsAndMaybeTimer()
@@ -40,8 +40,8 @@ void PBmotorDriver::setLMpwr(int pwr)
     digitalWrite(_LMDIR, LOW);
 }
 
-// speed should be a number between -255 and 255
-void PBmotorDriver::setRMpwr(int power)
+// power should be a number between -255 and 255
+void PBmotorDriver::setRMpwr(int pwr)
 {
   init(); // initialize if necessary
   boolean reverse = 0;
@@ -60,8 +60,8 @@ void PBmotorDriver::setRMpwr(int power)
     digitalWrite(_RMDIR, LOW);
 }
 
-// set speed for both motors
-// speed should be a number between -255 and 255
+// set power for both motors
+// power should be a number between -255 and 255
 void PBmotorDriver::setPwrs(int LMpwr, int RMpwr){
   setLMpwr(LMpwr);
   setRMpwr(RMpwr);
