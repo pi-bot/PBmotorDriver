@@ -69,6 +69,7 @@ void loop()
     delay(2000);
     motors.setPwrs(-255, -255);
     delay(2000);
- 
-  delay(6000);   // wait before repeating the loop
+  
+    motors.setPwrs(0, 0);
+    delay(6000);   // wait before repeating the loop
 }
