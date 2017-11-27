@@ -28,6 +28,8 @@ with the other motor.
 
 **N.B.** The voltage supplied to the motors are directly from the battery when a micro-usb power supply is disconnected. This means that the power and subsequent speeds of the motors will depend on the batteries charge level.
 
+**N.B.2** The gear assemblies are reversed on the right motor in respect to the left motor. This means to drive both motors in the forward direction the left motor is sent a direction signal of *high* whilst the right motor is sent a direction signal of *low*.
+
 ## Version history
 * 0.1 (2017-11-27): Original release.
 
