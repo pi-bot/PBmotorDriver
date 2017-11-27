@@ -14,7 +14,7 @@ void PBmotorDriver::initPinsAndMaybeTimer()
   pinMode(_LMPWM, OUTPUT);
   digitalWrite(_RMPWM, LOW);
   pinMode(_RMPWM, OUTPUT);
-  digitalWrite(_LMDIR, LOW);
+  digitalWrite(_LMDIR, HIGH);
   pinMode(_LMDIR, OUTPUT);
   digitalWrite(_RMDIR, LOW);
   pinMode(_RMDIR, OUTPUT);
@@ -25,11 +25,11 @@ void PBmotorDriver::initPinsAndMaybeTimer()
 void PBmotorDriver::setLMpwr(int pwr)
 {
   init(); // initialize if necessary
-  boolean reverse = 0;
+  boolean reverse = 1; // the left motor requires a reverse HIGH/LOW signal with respect to the right motor. 
   if (pwr < 0)
   {
-    pwr = -pwr; // make speed a positive quantity
-    reverse = 1;    // preserve the direction
+    pwr = -pwr; // make power a positive quantity
+    reverse = 0;    // preserve the direction
   }
   if (pwr > 255)  // max 
     pwr = 255;
