@@ -48,16 +48,19 @@ void loop() {
   digitalWrite(RMDIR, LOW);
 
   // Make PiBot turn to the right for two second
+  Serial.println("Left motor moving forward");
   analogWrite(LMPWM, 127);
   delay(2000);
   
   // Make PiBot turn to the left for two second
+  Serial.println("Left motor stopped. Right Motor moving forward");
   analogWrite(LMPWM, 0);
   analogWrite(RMPWM, 127);
   delay(2000);
   
   
    // Make PiBot go foreward for 2s 
+  Serial.println("Both motors moving forward at half speed");
   analogWrite(LMPWM, 127);
   analogWrite(RMPWM, 127);
   
@@ -65,14 +68,15 @@ void loop() {
   
   
    // Make PiBot go backward for 2s 
+  Serial.println("Both motors moving backward at half speed");
   digitalWrite(LMDIR, LOW);
   digitalWrite(RMDIR, HIGH);
   
   delay(2000);
   
   
-  //Stop the robot for 3s before loop repeats  
-  
+  //Stop the robot and pause before loop repeats  
+  Serial.println("Both motors stopping for six seconds before next loop");
   analogWrite(LMPWM, 0);
   analogWrite(RMPWM, 0);
   
