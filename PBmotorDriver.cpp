@@ -69,3 +69,21 @@ void PBmotorDriver::setPwrs(int LMpwr, int RMpwr){
   setLMpwr(LMpwr);
   setRMpwr(RMpwr);
 }
+
+// stop function for left motor
+void PBmotorDriver::stopLM()
+{
+  setLMpwr(0);  
+} 
+
+// stop function for right motor
+void PBmotorDriver::stopLM()
+{
+  setRMpwr(0);  
+} 
+
+// stop function for both motors
+void PBmotorDriver::stopM()
+{
+  setPwrs(0,0);  
+} 
