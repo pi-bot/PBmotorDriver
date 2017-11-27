@@ -28,7 +28,7 @@ void loop()
     
    // run LM backward : turns PiBot to the left
     
-    digitalWrite(LED_PIN, LOW);
+  digitalWrite(LED_PIN, LOW);
     
     motors.setLMpwr(-122);
     delay(2000);
@@ -37,8 +37,8 @@ void loop()
  
    // run RM motor forward : turns PiBot to the left
   
-    digitalWrite(LED_PIN, HIGH);
-    motors.setLMpwr(0);
+  digitalWrite(LED_PIN, HIGH);
+    motors.stopLM();  // This is equivalent to:  motors.setLMpwr(0);
  
     motors.setRMpwr(122);
     delay(2000);
@@ -47,7 +47,7 @@ void loop()
     
    // run RM backward : turns PiBot to the right
     
-    digitalWrite(LED_PIN, LOW);
+  digitalWrite(LED_PIN, LOW);
     
     motors.setRMpwr(-122);
     delay(2000);
@@ -63,13 +63,13 @@ void loop()
     delay(2000);
  
     // run both motors backward : moves PiBot backward 
-  digitalWrite(LED_PIN, HIGH);
+  digitalWrite(LED_PIN, LOW);
   
     motors.setPwrs(-122, -122);
     delay(2000);
     motors.setPwrs(-255, -255);
     delay(2000);
   
-    motors.setPwrs(0, 0);
+    motors.stopM(); // This is equivalent to motors.setPwrs(0, 0);
     delay(6000);   // wait before repeating the loop
 }
