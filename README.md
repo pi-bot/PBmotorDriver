@@ -22,7 +22,7 @@ with the other motor.
 
 ## Documentation
 - `void setLMpwr(int pwr)` Set the power factor and direction for the left motor.
-  N.B. Power factors should be between -255 and 255. The motors brake at supplied values of 0. 
+  N.B. Power factors should be between -255 and 255. Reverse direction is achieved through negative values. The motors brake at supplied values of 0. 
 - `void setRMpwr(int pwr)` Set the power factor and direction for the right motor.
 - `void setPwrs(int LMpwr, int RMpwr)` Set power and direction for both motors.
 - `void stopLM()` Stops the left motor and is equivalent to setLMpwr(0).
