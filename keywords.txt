@@ -1,5 +1,8 @@
 PBmotorDriver KEYWORD1
 
-setLMpower KEYWORD2
-setRMpower KEYWORD2
-setPowers KEYWORD2
+setLMpwr KEYWORD2
+setRMpwr KEYWORD2
+setPwrs KEYWORD2
+stopLM KEYWORD2
+stopRM KEYWORD2
+stopM KEYWORD2
