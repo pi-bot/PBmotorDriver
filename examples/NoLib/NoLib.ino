@@ -47,24 +47,24 @@ void loop() {
   digitalWrite(LMDIR, HIGH);
   digitalWrite(RMDIR, LOW);
 
-  // Make PiBot turn to the right for one second
+  // Make PiBot turn to the right for two second
   analogWrite(LMPWM, 127);
   delay(2000);
   
-  // Make PiBot turn to the left for one second
+  // Make PiBot turn to the left for two second
   analogWrite(LMPWM, 0);
   analogWrite(RMPWM, 127);
   delay(2000);
   
   
-   // Make PiBot go foreward for 1s 
+   // Make PiBot go foreward for 2s 
   analogWrite(LMPWM, 127);
   analogWrite(RMPWM, 127);
   
   delay(2000);
   
   
-   // Make PiBot go backward for 1s 
+   // Make PiBot go backward for 2s 
   digitalWrite(LMDIR, LOW);
   digitalWrite(RMDIR, HIGH);
   
