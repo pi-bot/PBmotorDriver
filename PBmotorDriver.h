@@ -9,7 +9,10 @@ class PBmotorDriver
     static void setLMpwr(int pwr);
     static void setRMpwr(int pwr);
     static void setPwrs(int LMpwr, int RMpwr);
-
+    static void stopLM();  
+    static void stopRM();
+    static void stopM();
+  
   private:
     static void initPinsAndMaybeTimer();
     static const unsigned char _LMDIR;
